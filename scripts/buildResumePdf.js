@@ -9,7 +9,7 @@ const outputPath = path.resolve(__dirname, '../public/resume.pdf');
 
 const doc = new PDFDocument({
   size: 'A4',
-  margins: { top: 32, bottom: 32, left: 36, right: 36 }
+  margins: { top: 28, bottom: 28, left: 36, right: 36 }
 });
 
 const writeStream = fs.createWriteStream(outputPath);
@@ -21,45 +21,45 @@ const rightMargin = 36;
 const contentWidth = pageWidth - leftMargin - rightMargin;
 
 // Color Palette
-const cBlack = '#111827';
-const cDark = '#1e293b';
-const cGray = '#475569';
-const cLightGray = '#64748b';
-const cRule = '#94a3b8';
-const cLink = '#0f172a';
+const cBlack = '#000000';
+const cDark = '#111827';
+const cGray = '#4b5563';
+const cLightGray = '#6b7280';
+const cRule = '#374151';
+const cLink = '#000000';
 
 // Helper for section header with underline rule
 function drawSectionHeader(title) {
-  doc.moveDown(0.35);
-  doc.font('Helvetica-Bold').fontSize(9.5).fillColor(cBlack).text(title.toUpperCase(), { characterSpacing: 0.5 });
+  doc.moveDown(0.3);
+  doc.font('Helvetica-Bold').fontSize(10).fillColor(cBlack).text(title.toUpperCase(), { characterSpacing: 0.5 });
   const y = doc.y + 1.5;
-  doc.strokeColor(cRule).lineWidth(0.6).moveTo(leftMargin, y).lineTo(pageWidth - rightMargin, y).stroke();
+  doc.strokeColor(cRule).lineWidth(0.75).moveTo(leftMargin, y).lineTo(pageWidth - rightMargin, y).stroke();
   doc.y = y + 3.5;
 }
 
-// Helper for bullet items with bold prefix
+// Helper for bullet items with optional bold lead text
 function drawBullet(leadText, normalText, extraSpace = 2) {
   const startX = leftMargin + 10;
-  const bulletX = leftMargin + 2;
+  const bulletX = leftMargin + 1;
   const currentY = doc.y;
   
-  doc.font('Helvetica').fontSize(8.5).fillColor(cBlack).text('•', bulletX, currentY, { width: 8, lineGap: 1 });
+  doc.font('Helvetica').fontSize(8.5).fillColor(cBlack).text('•', bulletX, currentY, { width: 8, lineGap: 0.8 });
   doc.y = currentY;
   
   if (leadText) {
     doc.font('Helvetica-Bold').fontSize(8.5).fillColor(cBlack).text(leadText + ' ', startX, currentY, {
       continued: true,
       width: contentWidth - 10,
-      lineGap: 1.2
+      lineGap: 1.1
     });
     doc.font('Helvetica').fontSize(8.5).fillColor(cDark).text(normalText, {
       continued: false,
-      lineGap: 1.2
+      lineGap: 1.1
     });
   } else {
     doc.font('Helvetica').fontSize(8.5).fillColor(cDark).text(normalText, startX, currentY, {
       width: contentWidth - 10,
-      lineGap: 1.2
+      lineGap: 1.1
     });
   }
   doc.y += extraSpace;
@@ -67,38 +67,38 @@ function drawBullet(leadText, normalText, extraSpace = 2) {
 
 // 1. Header: Name & Contact Info
 doc.font('Helvetica-Bold').fontSize(22).fillColor(cBlack).text('Pratham Kumar', { align: 'center' });
-doc.moveDown(0.2);
+doc.moveDown(0.18);
 
 const contactY = doc.y;
-doc.font('Helvetica').fontSize(8.5).fillColor(cGray);
+doc.font('Helvetica').fontSize(8.5).fillColor(cDark);
 
-const contactText = 'Noida, Uttar Pradesh, India  |  +91-8409635355  |  prathamshahi0001@gmail.com  |  ';
+const contactText = 'Noida, Uttar Pradesh, India | +91-8409635355 | prathamshahi0001@gmail.com | ';
 doc.text(contactText, leftMargin, contactY, {
   align: 'center',
   continued: true
 });
 
-// Clickable links
+// Clickable links matching OCR header
 doc.fillColor(cLink).text('LinkedIn', {
   link: 'https://www.linkedin.com/in/pshahi5/',
   underline: true,
   continued: true
 });
-doc.fillColor(cGray).text('  |  ', { underline: false, continued: true });
+doc.fillColor(cDark).text(' | ', { underline: false, continued: true });
 
 doc.fillColor(cLink).text('GitHub', {
   link: 'https://github.com/prathamshahi1',
   underline: true,
   continued: true
 });
-doc.fillColor(cGray).text('  |  ', { underline: false, continued: true });
+doc.fillColor(cDark).text(' | ', { underline: false, continued: true });
 
 doc.fillColor(cLink).text('GFG', {
   link: 'https://www.geeksforgeeks.org/profile/pshahi5?tab=activity',
   underline: true,
   continued: true
 });
-doc.fillColor(cGray).text('  |  ', { underline: false, continued: true });
+doc.fillColor(cDark).text(' | ', { underline: false, continued: true });
 
 doc.fillColor(cLink).text('LeetCode', {
   link: 'https://leetcode.com/problemset/',
@@ -106,7 +106,7 @@ doc.fillColor(cLink).text('LeetCode', {
   continued: false
 });
 
-doc.moveDown(0.3);
+doc.moveDown(0.25);
 
 // 2. PROFESSIONAL SUMMARY
 drawSectionHeader('Professional Summary');
@@ -114,7 +114,7 @@ doc.font('Helvetica').fontSize(8.5).fillColor(cDark).text(
   'B.Tech Computer Science graduate with a CGPA of 7.63/10 and hands-on experience in full-stack web development using the MERN stack. Skilled in Java, JavaScript, SQL, Data Structures and Algorithms, and REST API development. Solved 120+ DSA problems and built full-stack web applications using MongoDB, Express.js, React.js, and Node.js. IEEE-published researcher with a strong foundation in software development and problem-solving.',
   leftMargin,
   doc.y,
-  { width: contentWidth, align: 'justify', lineGap: 1.2 }
+  { width: contentWidth, align: 'justify', lineGap: 1.1 }
 );
 
 // 3. TECHNICAL SKILLS
@@ -135,7 +135,7 @@ skillsList.forEach(item => {
     continued: false,
     lineGap: 1
   });
-  doc.y += 1;
+  doc.y += 0.8;
 });
 
 // 4. PROJECTS
@@ -157,7 +157,7 @@ doc.y += 2;
 
 drawBullet('', 'Architected a privacy-first, zero-storage image optimization platform delivering sub-100ms transformations using in-memory Node.js buffers, eliminating disk I/O and data retention risk', 1);
 drawBullet('', 'Developed an iterative binary-search quality-tuning algorithm to hit exact target file sizes (e.g. 50KB for visa/exam portal uploads), achieving 90%+ size reduction with minimal quality loss', 1);
-drawBullet('', 'Deployed globally on Cloudflare Workers with custom SPA routing, automated CI/CD pipeline, and Google Search Console SEO optimization for improved discoverability', 3);
+drawBullet('', 'Deployed globally on Cloudflare Workers with custom SPA routing, automated CI/CD pipeline, and Google Search Console SEO optimization for improved discoverability', 2.5);
 
 // Project 2: BookCart
 const p2Y = doc.y;
@@ -175,7 +175,7 @@ doc.y += 2;
 
 drawBullet('', 'Architected a full-stack MERN e-commerce bookstore platform featuring 350ms debounced search, dynamic price-range filtering (59–199), and a single-page 1-click checkout flow', 1);
 drawBullet('', 'Engineered a serverless Express API with global Mongoose connection caching and atomic $inc stock transactions, eliminating checkout race conditions and reducing cold-start latency by 40%', 1);
-drawBullet('', 'Bundled serverless functions into a 65KB standalone distribution using esbuild and deployed on Vercel Edge with SPA rewrites, automated CI/CD, and JWT role-based access control', 3);
+drawBullet('', 'Bundled serverless functions into a 65KB standalone distribution using esbuild and deployed on Vercel Edge with SPA rewrites, automated CI/CD, and JWT role-based access control', 2.5);
 
 // Project 3: Real Talks
 const p3Y = doc.y;
@@ -193,11 +193,11 @@ doc.y += 2;
 
 drawBullet('', 'Architected a high-concurrency real-time chat platform delivering sub-10ms bidirectional message delivery via Socket.IO room multiplexing, multi-tab presence tracking, and debounced typing indicators', 1);
 drawBullet('', 'Engineered zero-overhead database maintenance using MongoDB native TTL indexes (86,400s) for automated 24-hour message pruning, paired with a dual-layer authentication system (HTTP-Only cookies + Bearer token fallback) to handle cross-origin restrictions', 1);
-drawBullet('', 'Developed role-based group channel governance with automated admin succession and a Multer + Cloudinary media pipeline with interactive lightbox zoom, deployed across Vercel Edge CDN and Render', 3);
+drawBullet('', 'Developed role-based group channel governance with automated admin succession and a Multer + Cloudinary media pipeline with interactive lightbox zoom, deployed across Vercel Edge CDN and Render', 2.5);
 
 // 5. PUBLICATIONS
 drawSectionHeader('Publications');
-drawBullet('•', '“A Systematic Framework for Text-to-Speech System,” IEEE, 2025 – Co-authored a research paper presenting a structured framework for TTS system design and implementation', 2);
+drawBullet('', '“A Systematic Framework for Text-to-Speech System,” IEEE, 2025 – Co-authored a research paper presenting a structured framework for TTS system design and implementation', 2);
 
 // 6. EDUCATION
 drawSectionHeader('Education');
@@ -207,10 +207,10 @@ function drawEducationRow(inst, degree, dates, grade) {
   doc.font('Helvetica-Bold').fontSize(9).fillColor(cBlack).text(inst, leftMargin, startY, { continued: false });
   doc.font('Helvetica').fontSize(8.5).fillColor(cDark).text(dates, leftMargin, startY, { align: 'right' });
   
-  const line2Y = startY + 11;
+  const line2Y = startY + 10.5;
   doc.font('Helvetica-Oblique').fontSize(8.5).fillColor(cGray).text(degree, leftMargin, line2Y, { continued: false });
   doc.font('Helvetica').fontSize(8.5).fillColor(cBlack).text(grade, leftMargin, line2Y, { align: 'right' });
-  doc.y = line2Y + 13;
+  doc.y = line2Y + 12;
 }
 
 drawEducationRow('Sharda University', 'B.Tech in Computer Science', '2022 – 2026', 'CGPA: 7.63 / 10');
@@ -219,18 +219,19 @@ drawEducationRow('Asian School', 'Secondary Education (Class X)', '2019', 'Perce
 
 // 7. CERTIFICATIONS
 drawSectionHeader('Certifications');
-drawBullet('• Oracle Academy:', 'Java Fundamentals, Database Foundations, and AI Foundations Associate – core programming, relational databases, and AI concepts', 1.5);
-drawBullet('• Apna College:', 'Data Structures & Algorithms (DSA) in Java – intensive problem-solving and competitive programming training', 1.5);
-drawBullet('• MySirG:', 'Java Standard Edition (Core Java) – 3-month comprehensive Core Java training program', 1.5);
-drawBullet('• MERN Stack Bootcamp:', 'hands-on full-stack development training using MongoDB, Express.js, React.js, and Node.js', 2);
+drawBullet('Oracle Academy:', 'Java Fundamentals, Database Foundations, and AI Foundations Associate – core programming, relational databases, and AI concepts', 1.2);
+drawBullet('Apna College:', 'Data Structures & Algorithms (DSA) in Java – intensive problem-solving and competitive programming training', 1.2);
+drawBullet('MySirG:', 'Java Standard Edition (Core Java) – 3-month comprehensive Core Java training program', 1.2);
+drawBullet('MERN Stack Bootcamp –', 'hands-on full-stack development training using MongoDB, Express.js, React.js, and Node.js', 1.8);
 
 // 8. EXTRACURRICULAR ACTIVITIES
 drawSectionHeader('Extracurricular Activities');
-drawBullet('• Table Tennis Player:', 'Represented Sharda University at the All India University Table Tennis Tournament, demonstrating discipline, competitiveness, and time management', 1.5);
-drawBullet('• Kartavya NGO:', 'Active member and facilitator, coordinating community outreach and social impact activities, demonstrating leadership and teamwork', 1.5);
+drawBullet('Table Tennis Player:', 'Represented Sharda University at the All India University Table Tennis Tournament, demonstrating discipline, competitiveness, and time management', 1.2);
+drawBullet('Kartavya NGO:', 'Active member and facilitator, coordinating community outreach and social impact activities, demonstrating leadership and teamwork', 1.2);
 
 doc.end();
 
 writeStream.on('finish', () => {
   console.log('PDF resume successfully built at ' + outputPath);
 });
+

@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build-resume": "node scripts/buildResumePdf.js",
+    "build": "node scripts/buildResumePdf.js && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
   },
