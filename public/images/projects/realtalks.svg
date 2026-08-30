@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="grad-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+    <linearGradient id="bg-dark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0b0f19" />
+    </linearGradient>
+  </defs>
+  <style>
+    .title { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; fill: #ffffff; }
+    .subtitle { font-family: system-ui, -apple-system, sans-serif; font-weight: 500; fill: #94a3b8; }
+    .badge { font-family: monospace; font-size: 13px; font-weight: 600; }
+  </style>
+  
+  <rect width="800" height="500" rx="24" fill="url(#bg-dark)" />
+  <rect x="40" y="40" width="720" height="420" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2" />
+  <rect x="40" y="40" width="720" height="44" rx="16" fill="#0f172a" />
+  <circle cx="65" cy="62" r="6" fill="#ef4444" />
+  <circle cx="85" cy="62" r="6" fill="#f59e0b" />
+  <circle cx="105" cy="62" r="6" fill="#10b981" />
+  <rect x="140" y="50" width="400" height="24" rx="6" fill="#1e293b" />
+  <text x="160" y="66" class="subtitle" font-size="12">https://realtalks.chat</text>
+  
+  <rect x="40" y="84" width="220" height="376" fill="#0f172a" />
+  <text x="60" y="120" class="title" font-size="16">💬 Conversations</text>
+  <rect x="55" y="140" width="190" height="44" rx="8" fill="#1e293b" stroke="url(#grad-emerald)" stroke-width="1.5" />
+  <circle cx="75" cy="162" r="12" fill="#06b6d4" />
+  <circle cx="83" cy="170" r="4" fill="#10b981" />
+  <text x="96" y="166" class="title" font-size="13">Pratham Kumar</text>
+  
+  <rect x="260" y="84" width="500" height="376" fill="#0b0f19" />
+  <rect x="290" y="130" width="280" height="48" rx="12" fill="#1e293b" />
+  <text x="310" y="160" class="title" font-size="13" fill="#e2e8f0">Sub-10ms Socket.IO Multiplexing 🚀</text>
+  
+  <rect x="440" y="200" width="290" height="52" rx="12" fill="#047857" />
+  <text x="460" y="230" class="title" font-size="13" fill="#ffffff">Automated 24h TTL Index Pruning ✓</text>
+  
+  <rect x="280" y="390" width="460" height="48" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="305" y="420" class="subtitle" font-size="13">Type a message...</text>
+  <circle cx="710" cy="414" r="16" fill="#10b981" />
+  <text x="704" y="420" fill="#ffffff" font-size="14">➤</text>
+
+</svg>

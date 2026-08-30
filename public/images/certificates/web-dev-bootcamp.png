@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560">
+  <defs>
+    <linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="grad-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+    <linearGradient id="bg-dark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0b0f19" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <style>
+    .title { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; fill: #ffffff; }
+    .subtitle { font-family: system-ui, -apple-system, sans-serif; font-weight: 500; fill: #94a3b8; }
+    .badge { font-family: monospace; font-size: 13px; font-weight: 600; }
+  </style>
+  
+    <rect width="800" height="560" rx="20" fill="url(#bg-dark)" />
+    <rect x="30" y="30" width="740" height="500" rx="14" fill="#0f172a" stroke="#334155" stroke-width="2" />
+    <rect x="50" y="50" width="700" height="460" rx="10" fill="none" stroke="url(#grad-purple)" stroke-width="3" stroke-dasharray="6 4" opacity="0.8" />
+    
+    <!-- Seal -->
+    <circle cx="400" cy="130" r="45" fill="#1e293b" stroke="url(#grad-purple)" stroke-width="3" />
+    <text x="400" y="142" font-size="34" text-anchor="middle">🎓</text>
+
+    <text x="400" y="220" class="subtitle" font-size="16" letter-spacing="4" text-anchor="middle">CERTIFICATE OF ACCOMPLISHMENT</text>
+    <text x="400" y="270" class="title" font-size="28" fill="#f8fafc" text-anchor="middle">The Complete Web Development (MERN)</text>
+    
+    <text x="400" y="330" class="subtitle" font-size="16" text-anchor="middle">Awarded to</text>
+    <text x="400" y="375" class="title" font-size="32" fill="url(#grad-cyan)" text-anchor="middle">PRATHAM KUMAR</text>
+    
+    <text x="400" y="425" class="subtitle" font-size="15" text-anchor="middle">Issued by Udemy • Verified Credential</text>
+    
+    <line x1="160" y1="460" x2="340" y2="460" stroke="#475569" stroke-width="1.5" />
+    <text x="250" y="485" class="subtitle" font-size="12" text-anchor="middle">Authorized Signature</text>
+    
+    <line x1="460" y1="460" x2="640" y2="460" stroke="#475569" stroke-width="1.5" />
+    <text x="550" y="485" class="subtitle" font-size="12" text-anchor="middle">Official Verification</text>
+  
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="grad-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+    <linearGradient id="bg-dark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0b0f19" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <style>
+    .title { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; fill: #ffffff; }
+    .subtitle { font-family: system-ui, -apple-system, sans-serif; font-weight: 500; fill: #94a3b8; }
+    .badge { font-family: monospace; font-size: 13px; font-weight: 600; }
+  </style>
+  
+  <rect width="800" height="500" rx="24" fill="url(#bg-dark)" />
+  <rect x="40" y="40" width="720" height="420" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2" />
+  <rect x="40" y="40" width="720" height="44" rx="16" fill="#0f172a" />
+  <text x="70" y="68" class="title" font-size="18" fill="url(#grad-amber)">📋 TaskFlow Kanban</text>
+  <!-- Columns -->
+  <rect x="70" y="105" width="205" height="330" rx="10" fill="#0b0f19" />
+  <text x="85" y="132" class="title" font-size="14" fill="#94a3b8">TODO (3)</text>
+  <rect x="80" y="150" width="185" height="70" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1" />
+  <text x="95" y="175" class="title" font-size="13">Auth Interceptor</text>
+  <text x="95" y="198" class="badge" font-size="10" fill="#f59e0b">HIGH PRIORITY</text>
+
+  <rect x="295" y="105" width="205" height="330" rx="10" fill="#0b0f19" />
+  <text x="310" y="132" class="title" font-size="14" fill="#38bdf8">IN PROGRESS (2)</text>
+  <rect x="305" y="150" width="185" height="80" rx="8" fill="#1e293b" stroke="#06b6d4" stroke-width="1.5" />
+  <text x="320" y="175" class="title" font-size="13">WebSocket Chat Feed</text>
+  <text x="320" y="205" class="badge" font-size="10" fill="#38bdf8">REACT + SOCKET</text>
+
+  <rect x="520" y="105" width="205" height="330" rx="10" fill="#0b0f19" />
+  <text x="535" y="132" class="title" font-size="14" fill="#34d399">COMPLETED (8)</text>
+  <rect x="530" y="150" width="185" height="70" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1" />
+  <text x="545" y="175" class="title" font-size="13">Database Schema</text>
+  <text x="545" y="198" class="badge" font-size="10" fill="#34d399">DONE ✓</text>
+
+</svg>

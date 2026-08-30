@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="grad-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+    <linearGradient id="bg-dark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0b0f19" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <style>
+    .title { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; fill: #ffffff; }
+    .subtitle { font-family: system-ui, -apple-system, sans-serif; font-weight: 500; fill: #94a3b8; }
+    .badge { font-family: monospace; font-size: 13px; font-weight: 600; }
+  </style>
+  
+  <rect width="800" height="500" rx="24" fill="url(#bg-dark)" />
+  <rect x="40" y="40" width="720" height="420" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2" />
+  <!-- Header -->
+  <rect x="40" y="40" width="720" height="44" rx="16" fill="#0f172a" />
+  <text x="70" y="68" class="title" font-size="18" fill="url(#grad-purple)">⚡ DevConnect</text>
+  <!-- Content cards -->
+  <rect x="70" y="110" width="660" height="150" rx="12" fill="#0b0f19" stroke="#334155" stroke-width="1" />
+  <circle cx="110" cy="150" r="22" fill="#8b5cf6" />
+  <text x="145" y="150" class="title" font-size="16">Alex Rivera • Senior MERN Architect</text>
+  <text x="145" y="172" class="subtitle" font-size="13">Looking for frontend contributors for open-source AI playground.</text>
+  <rect x="145" y="195" width="80" height="24" rx="12" fill="#8b5cf6" fill-opacity="0.2" />
+  <text x="185" y="211" class="badge" fill="#c084fc" text-anchor="middle">React</text>
+  <rect x="235" y="195" width="90" height="24" rx="12" fill="#06b6d4" fill-opacity="0.2" />
+  <text x="280" y="211" class="badge" fill="#38bdf8" text-anchor="middle">Node.js</text>
+
+  <rect x="70" y="280" width="660" height="150" rx="12" fill="#0b0f19" stroke="#334155" stroke-width="1" />
+  <circle cx="110" cy="320" r="22" fill="#10b981" />
+  <text x="145" y="320" class="title" font-size="16">Pratham Kumar • Full-Stack Engineer</text>
+  <text x="145" y="342" class="subtitle" font-size="13">Published paper on WebSocket performance benchmarks. Check it out!</text>
+
+</svg>
