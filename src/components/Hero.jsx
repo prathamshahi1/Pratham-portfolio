@@ -194,7 +194,7 @@ export default function Hero() {
                   </div>
                   <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/50 p-2.5">
                     <span className="text-slate-500 dark:text-slate-400 block text-[10px]">DSA SOLVED</span>
-                    <span className="font-bold text-cyan-500">200+ Questions</span>
+                    <span className="font-bold text-cyan-500">120+ Questions</span>
                   </div>
                 </div>
               </div>

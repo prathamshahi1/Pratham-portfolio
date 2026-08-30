@@ -8,7 +8,7 @@ export const personalInfo = {
     "Software Enthusiast"
   ],
   tagline: "I build scalable, responsive and user-focused web applications using modern technologies.",
-  summary: "B.Tech Computer Science graduate with a CGPA of 7.63/10 and hands-on experience in full-stack web development using the MERN stack. Skilled in Java, JavaScript, SQL, Data Structures and Algorithms, and REST API development. Solved 200+ DSA problems and built full-stack web applications using MongoDB, Express.js, React.js, and Node.js. IEEE-published researcher with a strong foundation in software development and problem-solving.",
+  summary: "B.Tech Computer Science graduate with a CGPA of 7.63/10 and hands-on experience in full-stack web development using the MERN stack. Skilled in Java, JavaScript, SQL, Data Structures and Algorithms, and REST API development. Solved 120+ DSA problems and built full-stack web applications using MongoDB, Express.js, React.js, and Node.js. IEEE-published researcher with a strong foundation in software development and problem-solving.",
   developmentInterests: [
     "Full-Stack MERN Architecture & Scalable Web Systems",
     "Algorithmic Problem Solving & Data Structures (Java)",
@@ -16,7 +16,7 @@ export const personalInfo = {
     "Modern Reactive UI/UX (React.js, Tailwind CSS, Framer Motion)"
   ],
   careerGoals: "Aspiring to leverage my full-stack engineering, DSA problem-solving, and research expertise in a high-impact engineering team building robust, scalable web products.",
-  email: "prathamm0001@gmail.com",
+  email: "prathamshahi0001@gmail.com",
   phone: "+91-8409635355",
   location: "Noida, Uttar Pradesh, India",
   availability: "Available for technical opportunities",
@@ -26,7 +26,7 @@ export const personalInfo = {
     linkedin: "https://www.linkedin.com/in/pshahi5/",
     leetcode: "https://leetcode.com/problemset/",
     geeksforgeeks: "https://www.geeksforgeeks.org/profile/pshahi5?tab=activity",
-    email: "mailto:prathamm0001@gmail.com",
+    email: "mailto:prathamshahi0001@gmail.com",
     phone: "tel:+918409635355"
   }
 };
@@ -41,7 +41,7 @@ export const stats = [
   },
   {
     label: "DSA Problems Solved",
-    value: "200+",
+    value: "120+",
     subtext: "Across LeetCode & GeeksforGeeks",
     icon: "Code2",
     accent: "emerald"
