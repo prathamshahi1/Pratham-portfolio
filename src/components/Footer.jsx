@@ -116,6 +116,8 @@ export default function Footer() {
 
             <a
               href={personalInfo.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               download="Pratham_Kumar_Resume.pdf"
               className="text-xs font-semibold text-cyan-600 dark:text-cyan-400 hover:underline"
             >

@@ -232,6 +232,14 @@ drawBullet('Kartavya NGO:', 'Active member and facilitator, coordinating communi
 doc.end();
 
 writeStream.on('finish', () => {
-  console.log('PDF resume successfully built at ' + outputPath);
+  const namedPath = path.resolve(__dirname, '../public/Pratham_Kumar_Resume.pdf');
+  fs.copyFileSync(outputPath, namedPath);
+  
+  const distDir = path.resolve(__dirname, '../dist');
+  if (fs.existsSync(distDir)) {
+    fs.copyFileSync(outputPath, path.join(distDir, 'resume.pdf'));
+    fs.copyFileSync(outputPath, path.join(distDir, 'Pratham_Kumar_Resume.pdf'));
+  }
+  console.log('PDF resume successfully built at ' + outputPath + ' and ' + namedPath);
 });
 

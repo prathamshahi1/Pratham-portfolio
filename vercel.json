@@ -4,7 +4,7 @@
   "outputDirectory": "dist",
   "headers": [
     {
-      "source": "/resume.pdf",
+      "source": "/(.*).pdf",
       "headers": [
         {
           "key": "Cache-Control",
@@ -15,9 +15,10 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!resume\\.pdf|images|assets|favicon|icons\\.svg).*)",
+      "source": "/((?!.*\\.pdf|images|assets|favicon|icons\\.svg).*)",
       "destination": "/index.html"
     }
   ]
 }
+
 

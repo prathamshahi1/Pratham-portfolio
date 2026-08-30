@@ -120,6 +120,8 @@ export default function Navbar() {
 
           <a
             href={personalInfo.resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             download="Pratham_Kumar_Resume.pdf"
             className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-xs font-semibold text-white shadow-md shadow-cyan-500/25 transition-all hover:opacity-95 hover:shadow-lg hover:shadow-cyan-500/30"
           >
@@ -178,6 +180,8 @@ export default function Navbar() {
               <div className="pt-3 border-t border-slate-200 dark:border-slate-800 flex gap-2">
                 <a
                   href={personalInfo.resumeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   download="Pratham_Kumar_Resume.pdf"
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex-1 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 py-2.5 text-xs font-semibold text-white shadow-md"

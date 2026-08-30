@@ -126,6 +126,8 @@ export default function Hero() {
 
               <a
                 href={personalInfo.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 download="Pratham_Kumar_Resume.pdf"
                 onClick={handleResumeDownload}
                 className="flex items-center gap-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 px-6 py-3.5 text-sm font-bold text-slate-800 dark:text-slate-200 shadow-sm transition-all hover:bg-slate-100 dark:hover:bg-slate-800 hover:scale-[1.02]"
