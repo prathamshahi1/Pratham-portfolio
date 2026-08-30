@@ -24,7 +24,7 @@ export const personalInfo = {
   socialLinks: {
     github: "https://github.com/prathamshahi1",
     linkedin: "https://www.linkedin.com/in/pshahi5/",
-    leetcode: "https://leetcode.com/problemset/",
+    leetcode: "https://leetcode.com/u/_pshahi/",
     geeksforgeeks: "https://www.geeksforgeeks.org/profile/pshahi5?tab=activity",
     email: "mailto:prathamshahi0001@gmail.com",
     phone: "tel:+918409635355"
